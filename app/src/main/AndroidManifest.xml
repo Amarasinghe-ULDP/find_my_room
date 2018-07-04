@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fmr.findmyroom">
+
+    // permissions for internet access
+    <uses-permission android:name="android.permission.INTERNET" />
+    // permission for voice detection
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".main.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".view_property.PropertyListActivity" />
+        <activity android:name=".virtual_agent.ChatBotActivity" />
+        <activity
+            android:name=".user_management.UserConnectionActivity"
+            android:label="@string/title_activity_user_connection"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".view_property.DetailViewActivity" />
+        <activity android:name=".add_property.AddPropertyActivity" />
+        <activity android:name=".user_management.RegularUserPreferenceActivity" />
+        <activity android:name=".user_management.AdvancedUserPreferenceActivity" />
+    </application>
+
+</manifest>

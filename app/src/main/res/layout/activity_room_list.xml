@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.fmr.findmyroom.view_property.PropertyListActivity">
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbarFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/propResultDescTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="4dp" />
+
+        <ListView
+            android:id="@+id/propListView"
+            android:layout_below="@+id/propResultDescTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/propListProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/toolbarFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/roomListToolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/toolbarBack"
+            app:titleTextColor="@color/toolbarTitle"
+            app:titleMarginStart="20dp"
+            app:subtitleTextColor="@color/toolbarSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/propSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</RelativeLayout>
